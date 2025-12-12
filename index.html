@@ -3,127 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final - Sistemas Operativos</title>
+    <title>Proyecto Final - Sistemas Operativos - Grupo 9</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-900">
+    <style>
+        
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #8d2727ff, 0 0 10px #fff, 0 0 15px #ff007f, 0 0 20px #ff007f, 0 0 25px #ff007f, 0 0 30px #ff007f, 0 0 35px #ff007f; }
+            50% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff007f, 0 0 20px #ff007f, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff; }
+            100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff007f, 0 0 20px #ff007f, 0 0 25px #ff007f, 0 0 30px #ff007f, 0 0 35px #ff007f; }
+        }
 
-    <!-- Navbar -->
-    <header class="bg-blue-600 p-4 text-white">
+        .glow-on-hover {
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            padding: 15px 40px;
+            background: #111;
+            border-radius: 50px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .glow-on-hover:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(45deg, #ff007f, #ff00ff, #00b3ff);
+            transition: all 0.4s ease-in-out;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: glow 1.5s infinite alternate;
+        }
+        
+        .glow-on-hover:hover:before {
+            width: 0;
+            height: 0;
+        }
+        
+        .glow-on-hover:hover {
+            color: #ffffffff;
+            box-shadow: 0 0 15px #ff007f, 0 0 25px #ff00ff, 0 0 35px #ff00ff;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    
+    <header class="bg-gradient-to-b from-pink-900 via-pink-800 to-pink-700 p-6 text-white shadow-xl">
         <div class="container mx-auto">
-            <h1 class="text-3xl font-bold">Proyecto Final - Sistemas Operativos</h1>
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 to-purple-200 animate__animated animate__pulse">Proyecto final - Sistemas Operativos</h2>
             <nav class="mt-4">
-                <ul class="flex space-x-6">
-                    <li><a href="#portada" class="hover:underline">Portada</a></li>
-                    <li><a href="#actividad1" class="hover:underline">Actividad 1</a></li>
-                    <li><a href="#actividad2" class="hover:underline">Actividad 2</a></li>
-                    <li><a href="#actividad3" class="hover:underline">Actividad 3</a></li>
-                    <li><a href="#actividad4" class="hover:underline">Actividad 4</a></li>
-                    <li><a href="#actividad5" class="hover:underline">Actividad 5</a></li>
-                    <li><a href="#actividad6" class="hover:underline">Actividad 6</a></li>
-                    <li><a href="#videos" class="hover:underline">Videos</a></li>
-                    <li><a href="#presentacion" class="hover:underline">Presentación</a></li>
+                <ul class="flex space-x-8 text-xl font-medium">
+                    <li><a href="#portada" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Portada</a></li>
+                    <li><a href="#actividad1" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Actividad 1</a></li>
+                    <li><a href="#actividad2" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Actividad 2</a></li>
+                    <li><a href="#actividad3" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Actividad 3</a></li>
+                    <li><a href="#actividad4" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Actividad 4</a></li>
+                    <li><a href="#actividad5" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Actividad 5</a></li>
+                    <li><a href="#actividad6" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Actividad 6</a></li>
+                    <li><a href="#videos" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Videos</a></li>
+                    <li><a href="#presentacion" class="hover:underline hover:text-purple-300 transition transform hover:scale-105">Presentación</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Portada -->
-    <section id="portada" class="py-12 bg-blue-100">
+    <section id="portada" class="py-16 bg-gradient-to-b from-pink-900 to-black">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Descripción del Proyecto</h2>
-            <p class="text-lg mb-4">Este proyecto final tiene como objetivo la instalación, configuración y gestión de distribuciones Linux, Docker, y Kubernetes en un entorno de trabajo real. Además, se crean aplicaciones, scripts y contenedores que se integran para crear un entorno funcional.</p>
-            <p class="text-lg">Integrantes del Grupo: Juan, Pedro, María</p>
+            <h2 class="text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 animate__animated animate__fadeIn animate__delay-1s">Descripción del Proyecto</h2>
+            <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto">Este proyecto tiene como objetivo profundizar en la instalación y configuración de distribuciones Linux, así como en la creación y gestión de contenedores Docker y orquestación con Kubernetes.</p>
+            <p class="text-xl mb-6 text-lg font-semibold text-indigo-100">Integrantes del Grupo: Juan Esteban Meñaca - Carlos Andres Caicedo - Santiago Aldana</p>
+            <button class="glow-on-hover">Ver Más</button>
         </div>
     </section>
 
-    <!-- Actividad 1: Instalación de Linux -->
-    <section id="actividad1" class="py-12">
+    <!-- Actividad 1 -->
+    <section id="actividad1" class="py-16 bg-gradient-to-b from-black via-gray-900 to-indigo-800">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Actividad 1: Instalación de Linux</h2>
-            <p class="text-lg mb-4">Realizamos la instalación de distribuciones Linux tanto en modo gráfico como consola, incluyendo particionamiento manual y herramientas necesarias.</p>
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Actividad 1: Instalación y configuración de distribuciones de Linux</h2>
+            <p class="text-lg mb-8">Realizamos la instalación de distribuciones Linux utilizando Linux Mint como distribucion de linux grafica, Debian Server como distribucion de consola.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-2">Instalación en Entorno Gráfico</h3>
-                    <img src="path_to_screenshot1.jpg" alt="Instalación gráfica" class="w-full h-auto rounded-lg shadow-md">
-                    <p class="mt-2">Captura de pantalla de la instalación gráfica de Linux.</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Instalación en Entorno Gráfico</h3>
+                    <img src="path_to_screenshot1.jpg" alt="Instalación gráfica" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Captura de pantalla de la instalación gráfica de Linux.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-2">Instalación en Consola</h3>
-                    <img src="path_to_screenshot2.jpg" alt="Instalación consola" class="w-full h-auto rounded-lg shadow-md">
-                    <p class="mt-2">Captura de pantalla de la instalación en consola.</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Instalación en Consola</h3>
+                    <img src="path_to_screenshot2.jpg" alt="Instalación consola" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Captura de pantalla de la instalación en consola.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Actividad 2: Editores Instalados -->
-    <section id="actividad2" class="py-12 bg-gray-100">
+    <!-- Actividad 2 -->
+    <section id="actividad2" class="py-16 bg-gradient-to-b from-black via-gray-900 to-indigo-800">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Actividad 2: Editores Instalados</h2>
-            <p class="text-lg mb-4">Instalación y configuración de editores de texto para desarrollo, como Vim y Nano.</p>
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Actividad 2: Editores Instalados</h2>
+            <p class="text-lg mb-8">Instalación y configuración de editores de texto como Vim y Nano.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-2">Vim</h3>
-                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md">
-                    <p class="mt-2">Configuración básica de Vim con sintaxis resaltada.</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Vim</h3>
+                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Vim con sintaxis resaltada.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-2">Nano</h3>
-                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md">
-                    <p class="mt-2">Configuración básica de Nano con resaltado de sintaxis.</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Nano</h3>
+                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Nano con resaltado de sintaxis.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Actividad 3: Scripts y Gestión de Procesos -->
-    <section id="actividad3" class="py-12">
+    <!-- Actividad 3 -->
+    <section id="actividad3" class="py-16 bg-gradient-to-b from-black via-gray-900 to-indigo-800">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Actividad 3: Scripts y Gestión de Procesos</h2>
-            <p class="text-lg mb-4">Desarrollamos scripts para automatización y gestionamos procesos del sistema.</p>
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Actividad 3: Scripts </h2>
+            <p class="text-lg mb-8">Script de automatizacion tanto en entorno grafico como en entorno de consola, ademas se utiliza el uso de comandos para la gestion de procesos, 
+            y termina con un programa en Java utilizando concurrencia mendiante hilos.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-2">Script de Automatización</h3>
-                    <pre class="bg-gray-800 text-white p-4 rounded-lg"><code>#!/bin/bash
-# Este script realiza una copia de seguridad
-cp -r /home/user/* /backup/</code></pre>
-                    <p class="mt-2">Captura del script automatizado en Bash.</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Vim</h3>
+                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Vim con sintaxis resaltada.</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-2">Gestión de Procesos</h3>
-                    <img src="path_to_process_screenshot.jpg" alt="Gestión de procesos" class="w-full h-auto rounded-lg shadow-md">
-                    <p class="mt-2">Captura mostrando el uso de comandos como `ps` y `top`.</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Nano</h3>
+                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Nano con resaltado de sintaxis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividad 4 -->
+    <section id="actividad4" class="py-16 bg-gradient-to-b from-black via-gray-900 to-indigo-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Actividad 4: Docker Engine </h2>
+            <p class="text-lg mb-8">Instalacion de Docker Engine, creando una imagen Docker para la creacion y gestion de contenedor.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Vim</h3>
+                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Vim con sintaxis resaltada.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Nano</h3>
+                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Nano con resaltado de sintaxis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividad 5 -->
+    <section id="actividad5" class="py-16 bg-gradient-to-b from-black via-gray-900 to-indigo-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Actividad 5: Docker Hub </h2>
+            <p class="text-lg mb-8">A partir de la imagen Docker procedemos a la modificacion de la misma y posteriormente publicarla en Docker Hub</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Vim</h3>
+                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Vim con sintaxis resaltada.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Nano</h3>
+                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Nano con resaltado de sintaxis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividad 6 -->
+    <section id="actividad6" class="py-16 bg-gradient-to-b from-black via-gray-900 to-indigo-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Actividad 5: Kubernetes </h2>
+            <p class="text-lg mb-8">Instalacion de Minikube en Linux, para la creacion y despliegue de Pod</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Vim</h3>
+                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Vim con sintaxis resaltada.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Nano</h3>
+                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p>Configuración básica de Nano con resaltado de sintaxis.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Videos -->
-    <section id="videos" class="py-12 bg-blue-100">
+    <section id="videos" class="py-16 bg-gray-900">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Videos del Proyecto</h2>
-            <p class="text-lg mb-4">Aquí se presentan los videos que muestran el desarrollo de las actividades del proyecto.</p>
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-2xl font-semibold">Video 1: Instalación de Linux</h3>
-                    <iframe class="w-full h-64" src="https://www.youtube.com/embed/tu_video_link" title="Instalación de Linux"></iframe>
+            <h2 class="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Videos del Proyecto</h2>
+            <p class="text-lg mb-8">Aquí se presentan los videos que muestran el desarrollo de las actividades del proyecto.</p>
+            <div class="space-y-8">
+                
+                <!--Video 1-->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Video 1: Instalación de Linux</h3>
+                    <iframe class="w-full h-64 rounded-lg shadow-md" src="https://www.youtube.com/embed/tu_video_link" title="Instalación de Linux"></iframe>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold">Video 2: Scripts y Gestión de Procesos</h3>
-                    <iframe class="w-full h-64" src="https://www.youtube.com/embed/tu_video_link" title="Scripts y Gestión de Procesos"></iframe>
-                </div>
-                <!-- Agrega más videos según sea necesario -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Presentación Final -->
-    <section id="presentacion" class="py-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Presentación Final</h2>
-            <p class="text-lg mb-4">Enlace a la presentación final del proyecto.</p>
-            <a href="link_to_presentation_video" class="text-blue-600 hover:underline">Ver Video de Presentación</a>
+                <!--Video 2-->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Video 2: Scripts y Gestión de Procesos</h3>
+                    <iframe class="w-full h-64 rounded-lg shadow-md" src="https://www.youtube.com/embed/tu_video_link" title="Scripts y Gestión de Procesos"></iframe>
+                </div>
+
+                <!--Video 3-->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transition transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Video 2: Scripts y Gestión de Procesos</h3>
+                    <iframe class="w-full h-64 rounded-lg shadow-md" src="https://www.youtube.com/embed/tu_video_link" title="Scripts y Gestión de Procesos"></iframe>
+                </div>
+
+            </div>
         </div>
     </section>
 
