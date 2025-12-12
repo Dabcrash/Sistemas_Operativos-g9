@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Sistemas Operativos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <header class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold">Proyecto Final - Sistemas Operativos</h1>
+            <nav class="mt-4">
+                <ul class="flex space-x-6">
+                    <li><a href="#portada" class="hover:underline">Portada</a></li>
+                    <li><a href="#actividad1" class="hover:underline">Actividad 1</a></li>
+                    <li><a href="#actividad2" class="hover:underline">Actividad 2</a></li>
+                    <li><a href="#actividad3" class="hover:underline">Actividad 3</a></li>
+                    <li><a href="#actividad4" class="hover:underline">Actividad 4</a></li>
+                    <li><a href="#actividad5" class="hover:underline">Actividad 5</a></li>
+                    <li><a href="#actividad6" class="hover:underline">Actividad 6</a></li>
+                    <li><a href="#videos" class="hover:underline">Videos</a></li>
+                    <li><a href="#presentacion" class="hover:underline">Presentación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portada -->
+    <section id="portada" class="py-12 bg-blue-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Descripción del Proyecto</h2>
+            <p class="text-lg mb-4">Este proyecto final tiene como objetivo la instalación, configuración y gestión de distribuciones Linux, Docker, y Kubernetes en un entorno de trabajo real. Además, se crean aplicaciones, scripts y contenedores que se integran para crear un entorno funcional.</p>
+            <p class="text-lg">Integrantes del Grupo: Juan, Pedro, María</p>
+        </div>
+    </section>
+
+    <!-- Actividad 1: Instalación de Linux -->
+    <section id="actividad1" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Actividad 1: Instalación de Linux</h2>
+            <p class="text-lg mb-4">Realizamos la instalación de distribuciones Linux tanto en modo gráfico como consola, incluyendo particionamiento manual y herramientas necesarias.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Instalación en Entorno Gráfico</h3>
+                    <img src="path_to_screenshot1.jpg" alt="Instalación gráfica" class="w-full h-auto rounded-lg shadow-md">
+                    <p class="mt-2">Captura de pantalla de la instalación gráfica de Linux.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Instalación en Consola</h3>
+                    <img src="path_to_screenshot2.jpg" alt="Instalación consola" class="w-full h-auto rounded-lg shadow-md">
+                    <p class="mt-2">Captura de pantalla de la instalación en consola.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividad 2: Editores Instalados -->
+    <section id="actividad2" class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Actividad 2: Editores Instalados</h2>
+            <p class="text-lg mb-4">Instalación y configuración de editores de texto para desarrollo, como Vim y Nano.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Vim</h3>
+                    <img src="path_to_vim_screenshot.jpg" alt="Editor Vim" class="w-full h-auto rounded-lg shadow-md">
+                    <p class="mt-2">Configuración básica de Vim con sintaxis resaltada.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Nano</h3>
+                    <img src="path_to_nano_screenshot.jpg" alt="Editor Nano" class="w-full h-auto rounded-lg shadow-md">
+                    <p class="mt-2">Configuración básica de Nano con resaltado de sintaxis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividad 3: Scripts y Gestión de Procesos -->
+    <section id="actividad3" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Actividad 3: Scripts y Gestión de Procesos</h2>
+            <p class="text-lg mb-4">Desarrollamos scripts para automatización y gestionamos procesos del sistema.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Script de Automatización</h3>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg"><code>#!/bin/bash
+# Este script realiza una copia de seguridad
+cp -r /home/user/* /backup/</code></pre>
+                    <p class="mt-2">Captura del script automatizado en Bash.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Gestión de Procesos</h3>
+                    <img src="path_to_process_screenshot.jpg" alt="Gestión de procesos" class="w-full h-auto rounded-lg shadow-md">
+                    <p class="mt-2">Captura mostrando el uso de comandos como `ps` y `top`.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="py-12 bg-blue-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Videos del Proyecto</h2>
+            <p class="text-lg mb-4">Aquí se presentan los videos que muestran el desarrollo de las actividades del proyecto.</p>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-2xl font-semibold">Video 1: Instalación de Linux</h3>
+                    <iframe class="w-full h-64" src="https://www.youtube.com/embed/tu_video_link" title="Instalación de Linux"></iframe>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold">Video 2: Scripts y Gestión de Procesos</h3>
+                    <iframe class="w-full h-64" src="https://www.youtube.com/embed/tu_video_link" title="Scripts y Gestión de Procesos"></iframe>
+                </div>
+                <!-- Agrega más videos según sea necesario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentación Final -->
+    <section id="presentacion" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Presentación Final</h2>
+            <p class="text-lg mb-4">Enlace a la presentación final del proyecto.</p>
+            <a href="link_to_presentation_video" class="text-blue-600 hover:underline">Ver Video de Presentación</a>
+        </div>
+    </section>
+
+</body>
+</html>
